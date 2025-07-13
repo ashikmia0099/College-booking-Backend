@@ -10,6 +10,11 @@ app.use(cors());
 app.use(express.json()); // ✅ This is required to parse JSON from POST requests
 
 
+app.use(cors({origin:['http://localhost:3000/','https://college-booking-frontend-inky.vercel.app']}));
+app.use(express.json());
+
+
+
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const uri = "mongodb+srv://collegeBooking:m8VnOaZljRTUu68I@cluster0.fkw47.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
@@ -35,7 +40,7 @@ async function run() {
         const Admission_Date = client.db('College_Booking').collection('Admission_Data');
         const all_user = client.db('College_Booking').collection('All_Users');
         const user_colleges = client.db('College_Booking').collection('User_Colleges');
-        const all = client.db('College_Booking').collection('All_Users_Second');
+       
         
 
         // get learn langauge data
