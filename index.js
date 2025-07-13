@@ -37,8 +37,8 @@ async function run() {
         const Admission_Date = client.db('College_Booking').collection('Admission_Data');
         const all_user = client.db('College_Booking').collection('All_Users');
         const user_colleges = client.db('College_Booking').collection('User_Colleges');
-        // const all_ = client.db('College_Booking').collection('All_Users');
-        // const selectedTutorCollection = client.db('Learn_Langauge').collection('selected_Tutor');
+        const all = client.db('College_Booking').collection('All_Users_Second');
+        
 
         // get learn langauge data
 
@@ -152,11 +152,11 @@ async function run() {
         // user admission data filter by email
 
         // Update this route to return an array of colleges for the user
-app.get('/user_colleges/:email', async (req, res) => {
-    const email = req.params.email;
-    const colleges = await user_colleges.find({ studentEmail: email }).toArray(); // <- returns array
-    res.send(colleges);
-});
+        app.get('/user_colleges/:email', async (req, res) => {
+            const email = req.params.email;
+            const colleges = await user_colleges.find({ studentEmail: email }).toArray(); // <- returns array
+            res.send(colleges);
+        });
 
 
 
