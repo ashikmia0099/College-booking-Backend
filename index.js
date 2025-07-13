@@ -10,8 +10,6 @@ app.use(cors());
 app.use(express.json()); // ✅ This is required to parse JSON from POST requests
 
 
-// username = collegeBooking
-// Databasepassword = m8VnOaZljRTUu68I
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const uri = "mongodb+srv://collegeBooking:m8VnOaZljRTUu68I@cluster0.fkw47.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
@@ -43,16 +41,6 @@ async function run() {
         // get learn langauge data
 
 
-        // app.get('/book_post_Form', async (req, res) => {
-        //     // const email = req.query.email;
-        //     // let query = {};
-        //     // if (email) {
-        //     //     query = { email: email };
-        //     // }
-        //     const books_data = Books_Data.find(books_data);
-        //     const result = await allLanguages.toArray();
-        //     res.send(result);
-        // });
 
 
         // all user api
